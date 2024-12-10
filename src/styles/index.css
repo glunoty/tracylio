@@ -1,0 +1,48 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/*  */
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-mono lowercase decoration-1 underline-offset-2;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold text-white;
+  }
+
+  h1 {
+    @apply text-4xl mb-8;
+  }
+
+  h2 {
+    @apply text-2xl mb-6;
+  }
+
+  h3 {
+    @apply text-xl mb-1;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .flex-row-between-center {
+    @apply flex items-center justify-between;
+  }
+}
+
+.lucide {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2px;
+}
