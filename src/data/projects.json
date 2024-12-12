@@ -1,8 +1,7 @@
 [
   {
-    "label": "Mony",
-    "path": "",
-    "coverImage": "images/project_1.png",
-    "year": 2020
+    "label": "SonicFlow",
+    "link": "https://github.com/glunoty/SonicFlow",
+    "description": "lightweight music player application developed in C# using Windows Forms. Leveraging the NAudio library for audio playback and TagLib# for metadata extraction, the application provides a minimalistic yet functional interface for users to manage and play their music tracks."
   }
 ]
