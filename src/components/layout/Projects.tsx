@@ -1,32 +1,32 @@
 import Heading from "../ui/Heading";
 import Link from "../ui/Link";
+import projects from "@/data/projects.json";
+
+const ProjectList = () => {
+  return (
+    <ul className="flex flex-col gap-6">
+      {projects.map((project, index) => (
+        <li key={index}>
+          <Link variant="group" href={project.link}>
+            <Heading as="h3" variant="link">
+              {project.label}
+            </Heading>
+            <span className="text-muted text-sm block mt-2 mb-4">Creator</span>
+            <p>{project.description}</p>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 function Projects() {
   return (
     <section>
       <Heading as="h2">Project</Heading>
-      <div className="mb-6">
-        <ul>
-          <li>
-            <Link variant="group" href="https://github.com/glunoty/SonicFlow">
-              <Heading as="h3" variant="link">
-                SonicFlow
-              </Heading>
-              <span className="text-sm text-muted block mt-2 mb-2">
-                Creator
-              </span>
-              <p>
-                open-source project for initializing full-stack next.js apps.
-                24k+ stars, 200+ contributors
-              </p>
-            </Link>
-          </li>
-        </ul>
+      <div>
+        <ProjectList />
       </div>
-
-      <Link variant="labeledIcon" href="#">
-        All Projects
-      </Link>
     </section>
   );
 }
